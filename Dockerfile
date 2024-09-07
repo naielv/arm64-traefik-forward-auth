@@ -1,4 +1,4 @@
-FROM golang:1.10-alpine as builder
+FROM golang:1.17-alpine as builder
 
 # Now we DO need these, for the auto-labeling of the image
 ARG BUILD_DATE
