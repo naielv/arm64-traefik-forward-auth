@@ -23,7 +23,7 @@ RUN apk add --no-cache git && \
 
 # Copy & build
 ADD . /app/
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix nocgo -o /traefik-forward-auth .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -a -installsuffix nocgo -o /traefik-forward-auth .
 
 # Copy into scratch container
 FROM alpine
